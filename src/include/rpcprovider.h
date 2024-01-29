@@ -3,7 +3,10 @@
 
 
 #include "google/protobuf/service.h"
-
+#include<muduo/net/TcpServer.h> 
+#include<muduo/net/EventLoop.h>
+#include<muduo/net/InetAddress.h>
+#include <memory>
 
 // 框架提供的专门发布rpc服务的网络对象类
 class RpcProvider
@@ -17,7 +20,12 @@ public:
 
 private:
     
+    muduo::net::EventLoop m_eventLoop; // TcpServer底层会使用muduo库中的EventLoop来实现epoll
 
+    void OnConnection(const muduo::net::TcpConnectionPtr &conn);
+    void OnMessage(const muduo::net::TcpConnectionPtr &conn,
+                                     muduo::net::Buffer *buffer, 
+                                     muduo::Timestamp stamp);
 };
 
 #endif

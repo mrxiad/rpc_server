@@ -1,1 +1,2 @@
-/usr/bin/c++ -fPIC -g -shared -Wl,-soname,libmprpc.so -o /home/xiadong/rpc/lib/libmprpc.so CMakeFiles/mprpc.dir/mprpcapplication.cc.o CMakeFiles/mprpc.dir/mprpcconfig.cc.o CMakeFiles/mprpc.dir/rpcprovider.cc.o   -L/home/xiadong/rpc/lib  -Wl,-rpath,/home/xiadong/rpc/lib -lmuduo_net -lmuduo_base -lpthread 
+/usr/bin/ar qc /home/xiadong/rpc/lib/libmprpc.a CMakeFiles/mprpc.dir/mprpcapplication.cc.o CMakeFiles/mprpc.dir/mprpcconfig.cc.o CMakeFiles/mprpc.dir/rpcprovider.cc.o
+/usr/bin/ranlib /home/xiadong/rpc/lib/libmprpc.a

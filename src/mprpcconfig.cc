@@ -12,6 +12,7 @@ void MprpcConfig::LoadConfigFile(const char *config_file)
         std::cout << config_file << " is note exist!" << std::endl;
         exit(EXIT_FAILURE);
     }
+    std::cout<<"file_path:"<<config_file<<std::endl;
 
     // 1.注释   2.正确的配置项 =    3.去掉开头的多余的空格 
     while(!feof(pf))
@@ -57,6 +58,7 @@ std::string MprpcConfig::Load(const std::string &key)
     auto it = m_configMap.find(key);
     if (it == m_configMap.end())
     {
+        std::cout<<"key:"<<key<<" 没找到"<<std::endl;
         return "";
     }
     return it->second;

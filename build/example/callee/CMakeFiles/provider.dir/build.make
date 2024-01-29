@@ -108,7 +108,7 @@ provider_EXTERNAL_OBJECTS =
 /home/xiadong/rpc/bin/provider: example/callee/CMakeFiles/provider.dir/userService.cc.o
 /home/xiadong/rpc/bin/provider: example/callee/CMakeFiles/provider.dir/__/user.pb.cc.o
 /home/xiadong/rpc/bin/provider: example/callee/CMakeFiles/provider.dir/build.make
-/home/xiadong/rpc/bin/provider: /home/xiadong/rpc/lib/libmprpc.so
+/home/xiadong/rpc/bin/provider: /home/xiadong/rpc/lib/libmprpc.a
 /home/xiadong/rpc/bin/provider: example/callee/CMakeFiles/provider.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/xiadong/rpc/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Linking CXX executable /home/xiadong/rpc/bin/provider"
 	cd /home/xiadong/rpc/build/example/callee && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/provider.dir/link.txt --verbose=$(VERBOSE)

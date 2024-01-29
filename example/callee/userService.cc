@@ -7,6 +7,7 @@ UserService原来是一个本地服务，提供了两个进程内的本地方法
 #include <string>
 #include "user.pb.h"
 #include "rpcprovider.h"
+#include "mprpcapplication.h"
 using namespace std;
 
 class UserService : public fixbug::UserServiceRpc {
@@ -91,7 +92,7 @@ class UserService : public fixbug::UserServiceRpc {
 int main(int argc, char **argv)
 {
     // 调用框架的初始化操作
-    //MprpcApplication::Init(argc, argv);
+    MprpcApplication::Init(argc, argv);
 
     // provider是一个rpc网络服务对象。把UserService对象发布到rpc节点上
     RpcProvider provider;
